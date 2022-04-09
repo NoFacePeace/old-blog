@@ -1,0 +1,738 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search>
+  <entry>
+    <title><![CDATA[修改 git 提交描述的编辑器]]></title>
+    <url>%2F2018%2F07%2F15%2Fgit-editor%2F</url>
+    <content type="text"><![CDATA[How do i make Git use the editor of my choice for commits? 传送门]]]></content>
+      <categories>
+        <category>教程</category>
+      </categories>
+      <tags>
+        <tag>Git</tag>
+        <tag>Vim</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[\#!/usr/bin/env exec 与 \#!/usr/bin/exec 的区别]]></title>
+    <url>%2F2018%2F07%2F07%2Fusr-bin-env%2F</url>
+    <content type="text"><![CDATA[executable program 可执行程序 脚本语言的第一行，目的就是指出，你想要你的这个文件中的代码用什么可执行程序去运行它 #!/usr/bin/exec 是告诉操作系统执行这个脚本的时候，调用 /usr/bin 下的 exec 解释器 #!/usr/bin/env exec 这种用法是为了防止操作系统用户没有将 exec 装在默认的 /usr/bin 路径里。当系统看到这一行的时候，首先会到 env 设置里查找 exec 的安装路径，再调用对应路径下的解释器程序完成操作 #!/usr/bin/exec 相当于写死了 exec 路径 #!/usr/bin/env exec 会去环境设置寻找 exec 目录，推荐这种写法]]></content>
+      <categories>
+        <category>教程</category>
+      </categories>
+  </entry>
+  <entry>
+    <title><![CDATA[Node.js 项目初始化]]></title>
+    <url>%2F2018%2F07%2F07%2Fnode-project-init%2F</url>
+    <content type="text"><![CDATA[添加 .gitignore 文件 下载 npm 包 npm install 新建 .env 文件 下载 dotenv 包 npm install dotenv --save]]></content>
+      <categories>
+        <category>教程</category>
+      </categories>
+      <tags>
+        <tag>Node</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[NPM 包的版本规范]]></title>
+    <url>%2F2018%2F06%2F16%2Fversion-of-npm-package%2F</url>
+    <content type="text"><![CDATA[This is how Semantic Versioning works according to the official website. Given a version number MAJOR.MINOR.PATCH,increment the: MAJOR version when you make incompatible API changes 当你修改 API 做一些不兼容变化的时候 MINOR version when you add functionality in a backwards-compatible manner 当你以向后兼容的方式添加功能代码的时候 PATCH version when you make backwards-compatible bug fixes 当你以向后兼容的方式修改 bug 的时候]]></content>
+      <categories>
+        <category>教程</category>
+      </categories>
+      <tags>
+        <tag>Node</tag>
+        <tag>NPM</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[如何成为一个更好的交谈者]]></title>
+    <url>%2F2018%2F06%2F06%2Fhow-to-talk%2F</url>
+    <content type="text"><![CDATA[如何成为一个更好的交谈者？ Don’t multitask. Don’t pontificate. Use open-ended questions. Go with the flow. If you don’t know,say that you don’t know. Don’t equate your experience with theirs. Try not to repeat yourself. Stay out of the weeds. Listen. Be brief.]]></content>
+      <categories>
+        <category>随笔</category>
+      </categories>
+  </entry>
+  <entry>
+    <title><![CDATA[VIM 学习]]></title>
+    <url>%2F2018%2F05%2F09%2Flearn-vim%2F</url>
+    <content type="text"><![CDATA[Vim the Six Billion Dollar editor 快捷键 i Insert 模式，按 ESC 回到 Normal 模式 :wq 存盘 + 退出 dd 删除当前行，并把删除的行存到剪贴板里 p 粘贴剪贴板 hjkl 移动光标 :help 显示相关命令的帮助 a 在光标后插入 o 在当前行后插入一个新行 O 在当前行前插入一个新行 cw 替换从光标所在位置后到一个单词结尾的字符 0 数字零，到行头 ^ 到本行第一个不是 blank 字符的位置（所谓 blank 字符就是空格，tab，换行，回车等） $ 到本行结尾 yy 拷贝当前行相当于 ddp u undo Ctrl + r redo :N 到第 N 行 gg 到第一行 G 到最后一行 传送门 教程]]></content>
+      <categories>
+        <category>教程</category>
+      </categories>
+      <tags>
+        <tag>VIM</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[www-data 执行 git 操作]]></title>
+    <url>%2F2018%2F05%2F07%2Fnginx-exec-git%2F</url>
+    <content type="text"><![CDATA[Git pull from a php script,not so simple. 报错 error: cannot open .git/FETCH_HEAD: Permission denied12sudo chmod 777 -R repository/sudo chmod 777 -R .git 报错 Host key verification failed1sudo -u www-data ssh-keygen -t rsa 传送门 扩展]]></content>
+      <categories>
+        <category>教程</category>
+      </categories>
+      <tags>
+        <tag>Git</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2F2018%2F05%2F06%2Favoid-merge-commits-in-git%2F</url>
+    <content type="text"><![CDATA[When running git pull we need to rebase,and so to the first way to avoid merge commits… 拉取代码时添加参数 --rebase1git pull --rebase 局部修改配置文件 ./.git/config12[branch &quot;master&quot;] rebase = true or 1git config branch.master.rebase true 全局修改配置文件 ～/.gitconfig12[branch] autosetuprebase = always or 1git config --global branch.autosetuprebase always 在 ~/.gitconfig 里起别名12[alias] pl = pull --rebase 下次拉取代码时，运行 git pl 传送门 原文]]></content>
+  </entry>
+  <entry>
+    <title><![CDATA[全局安装 Composer]]></title>
+    <url>%2F2018%2F05%2F06%2Fcomposer-install%2F</url>
+    <content type="text"><![CDATA[如何全局安装 Composer，以及常见问题 安装12curl -sS https://getcomposer.org/installer | phpsudo mv composer.phar /usr/local/bin/composer 问题 报错 12All settings correct for using ComposerUnable to write keys.dev.pub to: /home/ubuntu/.composer 原因 先前下载了 Composer 然后没有完成移除，所以需要重命名旧的文件夹 解决 1mv ~/.composer ~/.composer.old 传送门 原文]]></content>
+      <categories>
+        <category>教程</category>
+      </categories>
+      <tags>
+        <tag>Composer</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[Laravel 教程 - Web 开发实战入门实践]]></title>
+    <url>%2F2018%2F05%2F06%2Flaravel-question%2F</url>
+    <content type="text"><![CDATA[Laravel 项目部署到服务器上遇到的问题集 访问 403 原因 Nginx 的站点配置文件没有添加 index.php 项 解决 123server &#123; index index.html index.php index.htm index.nginx-debian.html;&#125; 访问 500 原因 没有下载第三方包 解决 1comoposer install 安装第三方包是报错 原因 缺少 PHP mbstring 扩展 解决 12345678910111213141516 sudo apt-get install php7.0-mbstring ``# 访问首页报错 `Whoops, looks like something went wrong.`- 异常信息 `No supported encrypter found. The cipher and / or key length are invalid.`- 原因 .gitingore 包含 .env 文件，服务器上没有环境变量配置文件，缺少 APP_KEY- 解决 ```bash cp .env.example .env sudo php artisan key:generate composer 安装包报错 ErrorException: proc_open(): fork failed - Cannot allocate memory 原文 原因：内存太小了，开启交换空间 执行 php artisan db:seed 报错 In Container.php line 752:Class UsersTableSeeder does not exist 原因：类名没有自动加载 解决]]></content>
+      <categories>
+        <category>教程</category>
+      </categories>
+      <tags>
+        <tag>Laravel</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[利用官网 ngrok 服务实现内网穿透]]></title>
+    <url>%2F2018%2F05%2F05%2Fngrok%2F</url>
+    <content type="text"><![CDATA[Get started with ngrok in just a few seconds. 下载 ngrok 解压文件 运行文件 1./ngrok http 80 访问 http://&lt;messy code&gt;.ngrok.io 访问 http://127.0.0.1:4040，查看本地请求的 Web 接口]]></content>
+      <categories>
+        <category>教程</category>
+      </categories>
+      <tags>
+        <tag>ngrok</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[Node 模块管理器 NPM]]></title>
+    <url>%2F2018%2F05%2F04%2Fnpm%2F</url>
+    <content type="text"><![CDATA[模块仓库切换到阿里的源 1npm config set registry https://registry.npm.taobao.org/ 检测是否切换成功 1npm config get registry]]></content>
+      <categories>
+        <category>教程</category>
+      </categories>
+      <tags>
+        <tag>Node</tag>
+        <tag>NPM</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[NVM 使用]]></title>
+    <url>%2F2018%2F05%2F04%2Fnvm%2F</url>
+    <content type="text"><![CDATA[Node Version Manager 通过 cURL 下载 1curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.11/install.sh | bash 下载最新版本的 Node 1nvm install node 使用最新下载的 Node 版本 1nvm use node 把旧版本的包迁移到新版本 1nvm install node --reinstall-packages-from=node 查看所有下载的版本 1nvm ls]]></content>
+      <categories>
+        <category>分类</category>
+      </categories>
+      <tags>
+        <tag>Node</tag>
+        <tag>NVM</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[大数据相关]]></title>
+    <url>%2F2018%2F05%2F04%2Fbig-data-system%2F</url>
+    <content type="text"><![CDATA[Kafka Hadoop Storm Spark]]></content>
+      <categories>
+        <category>教程</category>
+      </categories>
+  </entry>
+  <entry>
+    <title><![CDATA[Fetch API]]></title>
+    <url>%2F2018%2F05%2F04%2Ffetch%2F</url>
+    <content type="text"><![CDATA[传送门 MDN Fetch]]></content>
+      <categories>
+        <category>教程</category>
+      </categories>
+      <tags>
+        <tag>JavaScript</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[无限下拉对比分页]]></title>
+    <url>%2F2018%2F05%2F03%2Finfinite-scrolling-vs-pagination%2F</url>
+    <content type="text"><![CDATA[传送门 原文 译文]]></content>
+      <categories>
+        <category>教程</category>
+      </categories>
+  </entry>
+  <entry>
+    <title><![CDATA[理解 OAuth]]></title>
+    <url>%2F2018%2F05%2F03%2Foauth%2F</url>
+    <content type="text"><![CDATA[传送门 理解 OAuth 2.0]]></content>
+      <categories>
+        <category>教程</category>
+      </categories>
+      <tags>
+        <tag>OAuth</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[Sentry 初体验]]></title>
+    <url>%2F2018%2F05%2F03%2Fsentry%2F</url>
+    <content type="text"><![CDATA[Sentry provides open source error tracking that shows you every crash in your stack as it happens,with the details needed to prioritize,identify,reproduce,and fix each issue. 在官网注册一个账号 登录进入后台，新建一个项目 选择一种语言或者框架，这里选择 Flask 作为示例 给项目起个名字，创建项目 进入 Flask 项目目录 下载 raven 包 1pip install raven --upgrade 下载依赖 1pip install raven[flask] 在项目代码里集成 SDK 12from raven.contrib.flask import Sentrysentry = Sentry(app, dsn='&lt;dsn&gt;') 进入后台页面可以查看异常信息]]></content>
+      <categories>
+        <category>教程</category>
+      </categories>
+      <tags>
+        <tag>sentry</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[Ubuntu 基于 Laradock 搭建 PHP 开发环境]]></title>
+    <url>%2F2018%2F05%2F03%2Fubuntu-laradock%2F</url>
+    <content type="text"><![CDATA[PHP 开发环境的最佳实践 前提环境 Docker Docker Compose 下载 Laradock 复制 Laradock 项目 1git clone https://github.com/Laradock/laradock.git 进入 laradock 目录，复制配置文件 1cp env-example .env 运行所需的容器 1docker-compose up -d nginx mysql laradock 同级目录下新建 public 目录 123mkdir publiccd publicecho "Hello World!" &gt; index.html 打开浏览器，访问 http://localhost 1Hello World! 新建测试项目 在 laradock 同级目录下新建项目 123mkdir testcd testecho "test" &gt; index.html 进入 laradock/nginx/sites 并 创建 Nginx 配置文件 1cp app.conf.example test.conf 编辑配置文件 12345678910111213141516171819202122232425262728293031323334353637server &#123; listen 80; listen [::]:80; server_name app.test; root /var/www/test; index index.php index.html index.htm; location / &#123; try_files $uri $uri/ /index.php$is_args$args; &#125; location ~ \.php$ &#123; try_files $uri /index.php =404; fastcgi_pass php-upstream; fastcgi_index index.php; fastcgi_buffers 16 16k; fastcgi_buffer_size 32k; fastcgi_param SCRIPT_FILENAME $document_root$fastcgi_script_name; #fixes timeouts fastcgi_read_timeout 600; include fastcgi_params; &#125; location ~ /\.ht &#123; deny all; &#125; location /.well-known/acme-challenge/ &#123; root /var/www/letsencrypt/; log_not_found off; &#125; error_log /var/log/nginx/app_error.log; access_log /var/log/nginx/app_access.log;&#125; 重启 nginx 容器 1docker-compose restart nginx 修改 hosts 文件 1127.0.0.1 app.test 重启网络 1sudo /etc/init.d/networking restart 打开浏览器访问 app.test 1Hello World! 传送门 Laradock 官网]]></content>
+      <categories>
+        <category>教程</category>
+      </categories>
+      <tags>
+        <tag>PHP</tag>
+        <tag>Ubuntu</tag>
+        <tag>Docker</tag>
+        <tag>Laradock</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[Ubuntu 16.04 安装 Docker 及其组件]]></title>
+    <url>%2F2018%2F05%2F01%2Fubuntu-docker%2F</url>
+    <content type="text"><![CDATA[Docker provides a way to run applications securely isolated in a container,packaged with all its dependencies and libraries. 安装 Docker 社区版1234567891011121314# 添加使用 HTTPS 传输的软件包以及 CA 证书sudo apt-get install apt-transport-https ca-certificates curl software-properties-common# 添加软件源的 GPG 密钥curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -# 向 source.list 中添加 Docker 软件源sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable"# 安装 Docker 社区版sudo apt-get updatesudo apt-get install docker-ce# 启动 Docker 并设置开机启动sudo systemctl enable dockersudo systemctl start docker# 测试 Dokcer 是否安装正确sudo docker run hello-world 配置国内镜像加速 新建 daemon.json 1234# 用 root 用户进入 /etc/docker/sucd /etc/dockertouch daemon.json 配置 json 文件 12345&#123; "registry-mirrors": [ "https://registry.docker-cn.com" ]&#125; 重新启动服务 1234567sudo systemctl daemon-reloadsudo systemctl restart docker# 检测加速器是否生效docker info# output:Registry Mirrors:https://registry.docker-cn.com/ 安装 Compose123456# 下载二进制文件sudo curl -L https://github.com/docker/compose/releases/download/1.21.0/docker-compose-$(uname -s)-$(uname -m) -o /usr/local/bin/docker-compose# 赋予可执行权限sudo chmod +x /usr/local/bin/docker-compose# 检测是否下载docker-compose --version 问题MySQL Container fails to start解决 传送门 Docker 文档 Docker 教程 Docker Compose 文档]]></content>
+      <categories>
+        <category>教程</category>
+      </categories>
+      <tags>
+        <tag>Ubuntu</tag>
+        <tag>Docker</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[文档编写规范]]></title>
+    <url>%2F2018%2F05%2F01%2Fwrite-document%2F</url>
+    <content type="text"><![CDATA[有研究显示，打字的时候不喜欢在中文和英文之间加空格的人，感情路都走得很辛苦，有七成的比例会在 34 岁的时候跟自己不爱的人结婚，而其余三成的人最后只能把遗产留给自己的猫。毕竟爱情跟书写都需要适时地留白。 传送门 中文文案排版指北 Markdown 语法说明]]></content>
+      <categories>
+        <category>教程</category>
+      </categories>
+      <tags>
+        <tag>Markdown</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[版本类型说明]]></title>
+    <url>%2F2018%2F04%2F30%2Fversion%2F</url>
+    <content type="text"><![CDATA[α 、β、λ 常用来表示软件测试过程中的三个阶段，α 是第一阶段，一般只供内部测试使用；β 是第二阶段，已经消除了软件中大部分的不完善之处，但仍有可能还存在缺陷和漏洞，一般只提供给特定的用户群来测试使用；λ 是第三阶段，此时产品已经相当成熟，只需在个别地方再做进一步的优化处理即可上市发行。 Alpha: 是内部测试版，一般不向外部发布，会有很多 Bug，一般只有测试人员使用 Beta：也是测试版，这个阶段的版本会一直加入新的功能。在 Alpha 版之后推出 RC：（Release Candidate）顾名思义么！用在软件上就是候选版本。系统平台上就是发行后新版本。RC版本不会再加入新的功能了，主要着重于除错 GA：General Availability，正式发布的版本，在国外都是用 GA 来说明 release 版本的 RTM：（Release to Manufacture）是给工厂大量压片的版本，内容跟正式版是一样的，不过 RTM 版也有出限制、评估版的。但是和正式版本的主要程序代码都是一样的 OEM: 是给计算机厂商随着计算机贩卖的，也就是随机版。只能随机器出货，不能零售。只能全新安装，不能从旧有操作系统升级。包装不像零售版精美，通常只有一面 CD 和说明书（授权书） RVL：号称是正式版，其实 RVL 根本不是版本的名称。它是中文版/英文版文档破解出来的 EVAL：而流通在网络上的 EVAL 版，与“评估版”类似，功能上和零售版没有区别 RTL：Retail（零售版）是真正的正式版，正式上架零售版。在安装盘的i386文件夹里有一个eula.txt，最后有一行EULAID，就是你的版本。比如简体中文正式版是EULAID:WX.4_PRO_RTL_CN，繁体中文正式版是WX.4_PRO_RTL_TW。其中：如果是WX.开头是正式版，WB.开头是测试版。_PRE，代表家庭版；_PRO，代表专业版。 传送门]]></content>
+      <categories>
+        <category>教程</category>
+      </categories>
+  </entry>
+  <entry>
+    <title><![CDATA[小程序的运行流程]]></title>
+    <url>%2F2018%2F04%2F30%2Fwechat-mini-app%2F</url>
+    <content type="text"><![CDATA[开发者开发的工程文件打包上传到微信服务器 微信服务器经过处理，打包成 .wxapkg 格式文件放到 CDN 用户点击使用的时候，微信客户端从 CDN 下载该小程序的 .wxapkg 文件包 微信客户端解压 .wxapkg 包，得到 page-frame.html 和一些图片、js 文件，其中 js 文件会被引入到 page-frame.html 中 安卓微信客户端通过 activity，用 webview 来加载上一步骤解析出来的 page-frame.html 文件 小程序里面的数据，是通过 page-frame.html 里面引入的 js 文件动态加载，与 native 的通信也由 js 通过 jsbridge 的方式进行。 native 通过 activity 用 webview 加载本地的 html 文件 mina 框架mina 框架的面向对象是小程序开发者，作用是提供开发过程中的各个页面的组合，数据共享，页面配置，数据绑定，虚拟 DOM等功能的一个框架。]]></content>
+      <categories>
+        <category>教程</category>
+      </categories>
+      <tags>
+        <tag>WeChat</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[Linux 命令 systemctl]]></title>
+    <url>%2F2018%2F04%2F29%2Fsystemctl%2F</url>
+    <content type="text"><![CDATA[传送门 Systemd 入门教程：命令篇 Systemd 入门教程：实战篇]]></content>
+      <categories>
+        <category>教程</category>
+      </categories>
+      <tags>
+        <tag>Linux</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[PHP 代码风格检查，代码静态分析]]></title>
+    <url>%2F2018%2F04%2F29%2Fphp-code-detection%2F</url>
+    <content type="text"><![CDATA[使用 Github CI 自动进行代码风格检查，代码静态分析 规范 Commit message 和 Change log 编写指南 使用 GitLab CI 自动进行代码风格检查, 代码静态分析 工具代码风格检查 squizlabs/PHP_CodeSniffer pt-support/yii2-coding-standards 下面示例中末尾处的 . 代表检查当前目录下的代码 代码库里换行符是 LF。但 Windows 平台是 CRLF，因此在 Windows 下测试时需要修改换行符规则，修改 clone 下来的规则 ruleset.xml，增加以下配置。 12345&lt;rule ref="Generic.Files.LineEndings"&gt; &lt;properties&gt; &lt;property name="eolChar" value="\r\n"/&gt; &lt;/properties&gt;&lt;/rule&gt; 执行以下命令可以检查代码风格问题 1234567# clone coding standardgit clone http://git.jd.com/pt-support/yii2-coding-standards.git /tmp/yii-coding-standards# check coding style./vendor/bin/phpcs --extensions=php --standard=/tmp/yii-coding-standards/Yii2 .# or./vendor/squizlabs/php_codesniffer/bin/phpcs --extensions=php --standard=/tmp/yii-coding-standards/Yii2 . Windows 下如果使用 Docker 搭建 PHP 开发环境， ./vendor/bin/phpcs 不是有效的软链接文件，需要直接访问原始文件才能正常执行 静态分析工具 phpstan/phpstan 自动化代码评审 CODEBEAT CODE CLIMATE CODACY Wikipedia: Automated code review]]></content>
+      <categories>
+        <category>教程</category>
+      </categories>
+      <tags>
+        <tag>PHP</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[创建和发布自己的 Composer 包]]></title>
+    <url>%2F2018%2F04%2F28%2Fcomposer%2F</url>
+    <content type="text"><![CDATA[I wonder how to create your own bundle and then add it as an installation package for the Composer. 创建 Composer 包 创建包目录 1mkdir library 创建源代码目录 12cd librarymkdir src 初始化 composer.json 文件 12# 根目录composer init 编辑 composer.json 文件，配置自动加载 123456789101112131415161718&#123; "name": "chenhaotao/library", "description": "My Library", "type": "library", "authors": [ &#123; "name": "chenhaotao", "email": "cht@orzcn.cn" &#125; ], "minimum-stability": "stable", "require": &#123;&#125;, "autoload": &#123; "psr-4": &#123; "chenhaotao\\library\\": "src/" &#125; &#125;&#125; 有效性检测 12# 根目录composer validate 创建 Test 类 12cd srctouch Test.php 123456789&lt;?phpnamespace chenhaotao\library;class Test&#123; public function hello() &#123; echo "Hello world!"; &#125;&#125; 发布 Composer 包 在 Github 上创建包仓库 把包代码提交到 Github 123456git inittouch README.mdgit add *git commit -m "fix: 创建 Test 类"git remote add origin git@github.com:NoFacePeace/library.gitgit push -u origin master 把自定义包导入项目中 配置 composer.json 文件 1234567891011121314151617181920&#123; "name": "cht/test", "authors": [ &#123; "name": "cht", "email": "736090467@qq.com" &#125; ], // 使用自定义的包资源库 "repositories": [ &#123; "type": "vcs", "url": "https://github.com/NoFacePeace/library" &#125; ], // 导入自定义包 "require": &#123; "chenhaotao/library": "dev-master" &#125;&#125; 下载和更新依赖 123# 根目录composer installcomposer update 测试自定义包是否导入成功 1touch test.php 1234567&lt;?phprequire 'vendor/autoload.php';use chenhaotao\library\Test;$obj = new Test();$obj-&gt;hello(); 1php test.php 传送门 参考1 参考2]]></content>
+      <categories>
+        <category>教程</category>
+      </categories>
+      <tags>
+        <tag>Composer</tag>
+        <tag>PHP</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[项目启用 CI]]></title>
+    <url>%2F2018%2F04%2F28%2Fci%2F</url>
+    <content type="text"><![CDATA[如何在 PHP 项目中启用 CI 已知信息 CI: 用的是 Gitlab CI Linux 服务器: CentOS 7 Docker: 使用 Docker CE （社区版） 升级 CentOS确保 CentOS 尽可能的新，要不然很多依赖是旧的，解决起来比较费时 安装 GitLab Runner 添加 GitLab 官方仓库 1curl -L https://packages.gitlab.com/install/repositories/runner/gitlab-runner/script.rpm.sh | sudo bash 安装最新的 GitLab Runner 12345# 安装最新版本sudo yum install gitlab-runner# 安装指定版本yum list gitlab-runner --showduplicates | sort -rsudo yum install gitlab-runner-10.0.0-1 注册 GitLab Runner打开项目的 CI/CD 设置页 注意查看以下内容 gitlab-ci 的 coordinator URL registration token 执行如下命令注册 Runner 1sudo gitlab-runner register 按照提示填写信息即可，有几个注意的地方 runner 可以按照 tag 来管理，CI 任务可以设置只能由指定 tag 的 runner 执行 runner 可以限定是否只能运行当前项目的 CI 任务，默认是只能运行当前项目的任务 GitLab Runner 的 executor 类型有 parallels,virtualbox,kubernetes,docker,docker-ssh,shell,ssh,docker+machine,docker-ssh+machine 对于 PHP 项目来说一般就用两个 ssh 类型，用于自动部署代码 docker 类型，用于静态分析 PHP 代码，代码风格检查 安装 Docker使用阿里云的源 安装必要的包，yumj-utils provides the yum-config-manager utility,and device-mapper-presistent-data and lvm2 are required by the devicemapper storage driver 123sudo yum install -y yum-utils \device-mapper-presistent-data \lvm2 添加软件源信息 1sudo yum-config-manager --add-repo http://mirrors.aliyum.com/docker-ce/linux/centos/docker-ce.repo 更新源缓存并安装 Docker-CE 12sudo yum makecache fastsudo yum -y install docker-ce 开启 docker 服务 1sudo systemctl start docker 让项目启用 CI添加 .gitlab-ci.yml 文件在项目里添加 .gitlab-ci.yml，文件内容参考官方文档 启用 CI 客户端（Runner）去项目的 CI/CD 设置页，启用 runner 测试 CI执行完上述两个步骤，每次 push 完代码，就可以去项目的 pipelines 页查看 CI 的执行情况了 CI 用途自动部署去项目的 settings/repository 页面设置 Deploy Keys 这样 Runner 才有权限去拉取项目的代码 参考资料 Get Docker CE for CentOS Install GitLab Runner using the official GitLab repositories]]></content>
+      <categories>
+        <category>教程</category>
+      </categories>
+      <tags>
+        <tag>CI</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[提高表达能力的五本书]]></title>
+    <url>%2F2018%2F04%2F28%2Fexpression-book%2F</url>
+    <content type="text"><![CDATA[学会提问 谈话的力量 金字塔原理 谈判力 高难度谈话]]></content>
+      <categories>
+        <category>书单</category>
+      </categories>
+  </entry>
+  <entry>
+    <title><![CDATA[Win7 通过 Docker 搭建 PHP 环境]]></title>
+    <url>%2F2018%2F04%2F27%2Fwin7-docker-php%2F</url>
+    <content type="text"><![CDATA[Windwos 7 下 PHP 开发环境最佳实践 必备条件 Win 7 SP1 Docker Toolbox 如果是 Windows 10 Pro，可以安装 Docker for Windows，由于公司电脑只能安装 Win 7, 所以这里通过 Docker Toolbox 来使用 Docker 安装好 Docker Toolbox 后，启动 docker quick-start terminal，这个会在 VirtualBox 里创建一个默认的 vm 环境搭建手动安装 MySQL给虚拟机增加共享文件夹先在 VirtualBox 里设置共享文件夹，设置完重启虚拟机即可 docker-machine restart，这样 D:\codes\sites 就可以在虚拟机里面通过路径 /d/codes/sites 访问了，后续的 Laradock 需要使用这个路径 docker-machine 常用操作因为通过 VirtualBox 安装的虚拟机名字叫 default，这个虚拟机里面运行者 docker daemon，我们如何进入这个虚拟机呢？执行如下命令即可 123456# 进入虚拟机docker-machine ssh# 关闭虚拟机docker-machine stop# 启动虚拟机docker-machine start 通过Laradock安装 PHP 和 Nginx安装步骤以下操作在 D:\codes\sites 目录下，以下命令均在 pre-configured Docker Toolbox terminal 中执行 克隆 laradock 代码 1git clone https://github.com/laradock/laradock.git 文件夹结构应该类似这样 123+ laradock+ project-1+ project-2 去 laradock/nginx/sites，创建网站的配置文件，文件名称应该类似 *.conf 给域名加上 hosts 12127.0.0.1 project-1.test127.0.0.1 project-2.test 如果安装了 DNSAgent，就不需要手动添加 host 映射了 通过 VirtualBox 给虚拟机设置端口转发规则 这样可以直接通过访问当前 Windows 电脑的 IP 来访问虚拟机里的网站了 为什么可以通过设置端口转发规则来访问虚拟机里面的网站呢？ 我们通过如下命令可以查看各个容器的端口暴露情况 1234567$ docker psCONTAINER ID IMAGE COMMAND CREATED STATUS PORTS NAMESd468cfb4bcbf laradock_nginx "nginx" 7 hours ago Up 41 seconds 0.0.0.0:80-&gt;80/tcp, 0.0.0.0:443-&gt;443/tcp laradock_nginx_13e6f7191d22d laradock_php-fpm "docker-php-entryp..." 7 hours ago Up 42 seconds 9000/tcp laradock_php-fpm_13ab024632796 laradock_workspace "/sbin/my_init" 7 hours ago Up 42 seconds 0.0.0.0:2222-&gt;22/tcp laradock_workspace_1 根据上面结果可知，nginx 容器已经将 80,443 端口暴露给了虚拟机，因此只要我们能访问虚拟机，就可以访问虚拟机里面的网站了 这里除了通过设置端口转发规则的方式来访问虚拟机里面的网站，也可以通过将域名指向虚拟机 IP 的方式来达到相同效果 进入 laradock 文件夹，将 env-example 复制一份，重命名为 .env 1cp env-example .env 修改 .env 文件里的 COMPOSE_FIEL 配置，在 Linux 和 macOS 下路径分隔符是 :，在 Windows 是 ; 修改DOCKER_HOST_IP配置，参考如下表格 Docker version Set DOCKER_HOST_IP to Docker ToolBox/VirtualBox-based Docker IP address of VM Docker for Windows (native) IP address of PC Docker for Mac (native) See below Other platforms/versions Host name/ IP address of machine 因为咱们使用的是 Docker Toolbox，所以将当前虚拟机的ip设置为DOCKER_HOST_IP，这里是10.0.2.15，获得 IP 的步骤如下 12345# 进入虚拟机$ docker-machine ssh# 获得当前机器 IPdocker@default:~$ ifconfig 编译容器和运行 1docker-compose up -d nginx workspace 和 php-fpm 将会自动运行，不需要指定，这个命令运行完后，就可以通过浏览器访问 http://project-1.test 来访问网站了 由于 MySQL 安装在当前 Windows 主机上，运行 Docker 引擎的虚拟机无法通过 127.0.0.1 地址去访问 MySQL，所以程序里如果需要访问 MySQL，应该使用 Windows 主机的 IP 地址，例如 192.168.99.1 公司的机器都是强制开启了防火墙，需要允许 MySQL 程序通过防火墙，虚拟机才能正常访问到 更换 laradock_backend 的网段 查看当前 docker 管理的网络 12345678$ docker network lsNETWORK ID NAME DRIVER SCOPE2c7d80947a75 bridge bridge local64f81a5b77bc host host local53b4385a3518 laradock_backend bridge localae1e50111b8d laradock_default bridge local17d8e36f8443 laradock_frontend bridge local629576403ca3 none null local 查看laradock_backend的网络信息 123456789101112131415161718$ docker network inspect laradock_backend[ &#123; "Name": "laradock_backend", "Id": "53b4385a3518c057963538c2d071cecaa7955f3ef79bae988d8e823df8a337d6", "Created": "2017-12-05T12:22:36.738920519Z", "Scope": "local", "Driver": "bridge", "EnableIPv6": false, "IPAM": &#123; "Driver": "default", "Options": null, "Config": [ &#123; "Subnet": "172.20.0.0/16" &#125; ] &#125;, 可以看到laradock_backend的网段是172.20.0.0/16，而 gitlab 的 IP 地址是172.20.39.31 workspace使用了laradock_backend这个网络，因为laradock_backend网络与公司的网络冲突了，所以在workspace容器里无法正常访问 gitlab， 具体应用情景如下：某个 PHP composer 放在 gitlab，然后就无法通过 composer 安装了 解决方案如下: 修改laradock目录下的docker-compose.yml文件 ，找到Networks Setup这段，修改为如下内容1234567891011### Networks Setup ############################################networks: frontend: driver: "bridge" backend: driver: "bridge" ipam: driver: default config: - subnet: 172.21.0.0/16 然后执行如下命令删除 laradock 管理的容器，并重新编译和运行容器 12345# 删除这个项目里 docker-compose 管理的容器docker-compose down# 重新编译和运行容器docker-compose up -d nginx 常用命令运行服务1docker-compose up -d nginx 进入某个容器以进入 nginx 容器为例 1docker-compose exec nginx bash 重启服务1docker-compose restart 停止服务1docker-compose stop 查看当前正在运行的服务1docker ps 这个命令对于调试来说很有用，有的时候需要知道某个容器是否运行了 比如我曾经想连接容器里的 MySQL，但是端口并没有暴露给主机，怎么看端口有没有被暴露出来呢？这个命令就可以看了 运行服务，并且强制重建容器1docker-compose.exe up -d --force-recreate nginx 当修改了 docker-compose.yml，.env 或者任何 dockerfile，都需要重建容器，修改才会生效 查看某个容器的信息1234567891011# 列出当前活动的所有容器$ docker psCONTAINER ID IMAGE COMMAND CREATED STATUS PORTS NAMESdbcfc6315887 laradock_nginx "nginx" 39 minutes ago Up 39 minutes 0.0.0.0:80-&gt;80/tcp, 0.0.0.0:443-&gt;443/tcp laradock_nginx_1e670dac545ce laradock_php-fpm "docker-php-entryp..." 40 minutes ago Up 39 minutes 9000/tcp laradock_php-fpm_1e2bb4e701147 laradock_workspace "/sbin/my_init" 40 minutes ago Up 40 minutes 0.0.0.0:2222-&gt;22/tcp laradock_workspace_1# 查看某个容器$ docker inspect dbcfc6315887 如何运行 composer?在laradock目录下，执行docker-compose exec workspace bash, 进入 Workspace 容器， 然后再运行composer命令 如果在 workspace 里装了 zsh，那么可以执行如下命令进入 workspace 容器，docker-compose exec workspace zsh 如何在普通的命令行环境下运行 docker 命令？使用 docker-machine 查看当前有哪些 docker client ( 也称machine running docker) 123$ docker-machine lsNAME ACTIVE DRIVER STATE URL SWARM DOCKER ERRORSdefault * virtualbox Running tcp://192.168.99.100:2376 v17.11.0-ce 可以发现当前的 docker client 为 default 查看要给某个 docker client 设置的环境变量 12345678$ docker-machine env default$Env:DOCKER_TLS_VERIFY = "1"$Env:DOCKER_HOST = "tcp://192.168.99.100:2376"$Env:DOCKER_CERT_PATH = "C:\Users\yemeng1\.docker\machine\machines\default"$Env:DOCKER_MACHINE_NAME = "default"$Env:COMPOSE_CONVERT_WINDOWS_PATHS = "true"# Run this command to configure your shell:# &amp; "D:\program\Docker Toolbox\docker-machine.exe" env default | Invoke-Expression 按照提示所说的，执行如下命令，可以设置环境变量，这样就可以在当前的命令行环境下调用 docker 相关命令了 1&amp; "D:\program\Docker Toolbox\docker-machine.exe" env default | Invoke-Expression 例如执行docker ps，这样不会被提示error during connect: Get http://%2F%2F.%2Fpipe%2Fdocker_engine 如果使用的是 cmder，可以修改配置，让启动 cmder 的时候就自动执行上述命令，修改 cmder 配置文件config/user-profile.ps1，在底部增加如下内容 12:: set docker environment&amp; "D:\program\Docker Toolbox\docker-machine.exe" env default | Invoke-Expression 现在启动 cmder 后，就可以直接执行 docker 相关命令了，不用再打开pre-configured Docker Toolbox terminal了 开发中需要用到的工具 navicat-premium：数据库管理工具 加速工作效率的工具Ditto剪贴板管理工具，可以快速调用以前复制过的东西 Wox程序快速启动工具，搭配 everything，效率更高，可快速搜索电脑上的东西 cmder简洁美观易用的命令行工具，推荐将 Shell 换成 PowerShell as Admin，PowerShell 可以安装扩展，更好用 DNSAgent自动将 *.test 映射至 127.0.0.1 PowerShell 5.1目前稳定版 5.1，需通过安装 WMF 5.1 来使用 PowerShell 5.1 安装过程中可能会遇到0x80240037错误，这是由于微软通过某些更新限制了只有 Win 10 才能支持新款处理器，请安装这个程序禁用掉这个检查，有这种检查的更新不只一个，网上说的KB4012218卸载掉还不行 PowerShell 模块 z 基于cd命令的历史记录，快速在文件系统内导航 posh-git 提供更好的 Git 使用体验 FreeCommander类似收费软件Total Commander，不过这个是免费使用的，功能也很齐全，比 Windows 自带的文件管理器好用，可以双面板操作，可以使用Ctrl + Q快速预览文件内容，类似 macOS 下用空格预览文件内容的效果 参考链接 Compose CLI environment variables Setting DOCKER_HOST_IP]]></content>
+      <categories>
+        <category>教程</category>
+      </categories>
+      <tags>
+        <tag>PHP</tag>
+        <tag>Docker</tag>
+        <tag>Win7</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[Win10 搭建基于 Docker 的 PHP 开发环境]]></title>
+    <url>%2F2018%2F04%2F26%2Fwin10-docker-php%2F</url>
+    <content type="text"><![CDATA[PHP 开发环境最佳实践 必备条件 Win10 Pro 安装下载 Docker For Windows Docker For Windows 开启 Win10 的 Hyper-V BIOS 中开启虚拟化支持 控制面板-&gt;程序-&gt;启用或关闭 Windows 功能-&gt;选中 Hyper-V 安装 Docker For Windows 确认开启 Hyper-V，否则启动 Docker 的时候会提示开启 Hyper-V 在 Docker 的 Settings-&gt; Advanced 调节 VM 内存大小，否则启动时可能会提示内存不足导致启动失败 在 Docker 的 Setting-&gt;Share Drivers，勾选你需要的盘，否则可能会遇到 Driver has not been shared 的问题 在 Docker 的 Settings-&gt;Deamon 中设置国内镜像地址 https://registry.docker-cn.com 环境搭建通过 Laradock 安装 Nginx、MySQL 和 PHP安装步骤 创建工作目录如新建 webroot 目录，laradock 源码和项目代码都将放在该工作目录下（注：工作目录可任意创建，也可直接使用以前的 web 根目录） 克隆 Laradock 代码进入 webroot 工作目录，执行以下命令 1git clone https://github.com/laradock/laradock.git 生成 Laradock 配置文件进入 laradock 文件夹，将 env-example 复制一份，重命名为 .env 1cp env-example .env 如需配置 Nginx、 MySQL 等，均在 .env 文件中配置即可。 编译容器和运行 1docker-compose up -d nginx mysql workspace 和 php-fpm 将会自动运行，不需要指定。运行此命令后，通过浏览器访问 http://localhost 发现已经可以访问 nginx 服务了，只是报了 404 Not Found 错误 解决 404 Not Found 问题打开 laradock/nginx/sites/default.conf，发现 root 为 /var/www/public。在不改配置文件的情况下，只需在 webroot 目录下新建 public/index.html 文件，http://localhost 即可正常访问。 因为 laradock 目录的上级目录，即 webroot/ 目录，被映射到了 workspace 容器内 /var/www 下作为数据卷。 更换 laradock_backend 的网段 12345678$ docker network lsNETWORK ID NAME DRIVER SCOPE2c7d80947a75 bridge bridge local64f81a5b77bc host host local53b4385a3518 laradock_backend bridge localae1e50111b8d laradock_default bridge local17d8e36f8443 laradock_frontend bridge local629576403ca3 none null local 查看 laradock_backend 的网络信息 1234567891011121314151617$ docker network inspect laradock_backend &#123; "Name": "laradock_backend", "Id": "53b4385a3518c057963538c2d071cecaa7955f3ef79bae988d8e823df8a337d6", "Created": "2017-12-05T12:22:36.738920519Z", "Scope": "local", "Driver": "bridge", "EnableIPv6": false, "IPAM": &#123; "Driver": "default", "Options": null, "Config": [ &#123; "Subnet": "172.20.0.0/16" &#125; ] &#125;,&#125; 可以看到 laradock_backend 的网段是 172.20.0.0/16，而 gitlab 的 IP 地址是 172.20.39.31workspace 使用了 laradock_backend 这个网络，因为 laradock_backend 网络与公司的网络冲突了，所以在 workspace 容器里无法正常访问 gitlab 具体应用场景如下：某个 PHP composer 放在 gitlab，然后就无法通过 composer 安装了解决方案如下： 修改 laradock 目录下的 docker-compose.yml 文件，找到 Networks Setup 这段，修改如下内容 1234567891011### Networks Setup ############################################networks: frontend: driver: "bridge" backend: driver: "bridge" ipam: driver: default config: - subnet: 172.21.0.0/16 然后执行如下命令删除 laradock 管理的容器，并重新编译和运行容器 12345# 删除这个项目里 docker-compose 管理的容器docker-compose down# 重新编译和运行容器docker-compose up -d nginx mysql Nginx 配置虚拟主机 laradock/nginx/sites/ 目录下新建配置文件，如 test.conf，内如如下： 123456789101112131415161718192021222324252627server &#123; listen 80; listen [::]:80; server_name test.com; root /var/www/test; index index.php index.html index.htm; location / &#123; try_files $uri $uri/ /index.php$is_args$args; &#125; location ~ \.php$ &#123; try_files $uri /index.php =404; fastcgi_pass php-upstream; fastcgi_index index.php; fastcgi_buffers 16 16k; fastcgi_buffer_size 32k; fastcgi_param SCRIPT_FILENAME $document_root$fastcgi_script_name; include fastcgi_params; &#125; location ~ /\.ht &#123; deny all; &#125;&#125; webroot 目录下新建 test/index.php 测试文件，此时的工作目录结构类似： 1234-- webroot---- laradock---- test-------- index.php hosts 文件中做域名映射 127.0.0.1 test.com 停止、构建、重启容器，在 laradock 目录下执行以下命令即可： 123docker-compose downdocker-compose build nginxdocker-compose up-d nginx mysql Docker 常用命令Docker 中如何运行 Composer在 laradock 目录下，执行 docker-compose exec workspace bash，进入 Workspace 容器，然后可直接运行 Composer 命令如果在 workspace 里装了 zsh，可执行如下命令进入 workspace 容器，docker-compse exec workspace zsh 在普通的命令行环境下运行 docker 命令注意 如果在容器中起用了 MySQL 服务，则项目中 db 配置的 dsn 的 host 应该为 mysql 导入 sql 文件到 mysql 中的命令为 docker exec -i [CONTRAINER_NAME] bash -c &quot;mysql -uroot -proot avatar&quot; &lt; open_initial.sql MySQL 服务的 CONTRAINER_NAME 可进入 laradock 目录下，执行 docker ps 命令进行查看。 由于 Win10 重启之后会重新恢复到之前的工作状态（重新打开关机之前的软件），导致 Docker 可能出现问题，这种情况下请重启 Docker For Windows 参考链接Docker 快速上手参考参考文献：Docker 从入门到实战Laradock 使用教程 Docker常用命令进入 laradock 目录下，才能执行 docker-compose 命令： 123456789101112131415161718192021# List imagesdocker-compose images# 查看当前正在运行的容器（服务）docker-compose ps// 这个命令对于调试来说很有用，有的时候需要知道某个容器是否运行了// 比如我曾经想连接容器里的 MySQL，但是端口并没有暴露给主机，怎么看端口有没有被暴露出来呢？这个命令就可以看了# Create and start containers up 表示启动容器，-d 表示后台运行docker-compose up -d nginx mysql# 进入某个容器，如 workspace,mysql,nginx,php-fpmdocker-compose exec contrainer bash# 重启容器docker-compose restart nginx# 停止容器docker-compose stop nginx# Stop and remove containers,networks,images,and volumesdocker-compose down# 使用 Dockerfile 创建镜像docker-compose build nginx# 运行服务并强制创建容器docker-compose.exe up -d --force-recreate nginx 查看某个容器的信息 1234567891011# 列出当前活动的所有容器$ docker psCONTAINER ID IMAGE COMMAND CREATED STATUS PORTS NAMESdbcfc6315887 laradock_nginx "nginx" 39 minutes ago Up 39 minutes 0.0.0.0:80-&gt;80/tcp, 0.0.0.0:443-&gt;443/tcp laradock_nginx_1e670dac545ce laradock_php-fpm "docker-php-entryp..." 40 minutes ago Up 39 minutes 9000/tcp laradock_php-fpm_1e2bb4e701147 laradock_workspace "/sbin/my_init" 40 minutes ago Up 40 minutes 0.0.0.0:2222-&gt;22/tcp laradock_workspace_1# 查看某个容器$ docker inspect dbcfc6315887 当修改了 docker-compose.yml,.env 或任何 dockerfile，都需要重建容器，修改才会生效。 Docker 中登录和连接 MySQL 数据库使用 docker-compose exec mysql bash 命令可进入 mysql 容器，默认账号和密码都是 root，使用 mysql -u root -proot 即可登录数据库。 问题每次开机自启动了 Docker，但 nginx 和 mysql 服务都需要手动启动12cd laradockdocker-compose up -d nginx mysql $docker-compose exec 命令报错1234$ docker-compose exec workspace bash$ docker-compose exec mysql bashthe input device is not a TTY. If you are using mintty,try prefixing the command with 'winpty' 解决方案：Docker for Windows: Interactive Sessions in MinTTY Git Bash Docker 中如何使用 Composer在 laradock 目录下，执行 docker-compose exec workspace bash，进入 workspace 容器，然后直接运行 composer 命令即可。 Docker 中如何执行 php 命令进入 php-fpm 容器，执行 php -v 命令显示 php 版本信息，说明可执行 php init 等命令。 1234cd laradockdocker-compose exec php-fpm bash// 或 docker-compose exec workspace bashphp -v 如何获取 Docker IP，使用 Navicat 连接 MySQL 数据库执行 ipconfig 命令查看本机 IP 地址，使用即可 Docker 中 MySQL 数据库的导入导出使用 docker exec 命令直接操作123456$ cd laradock$ docker ps // 查看 mysql 容器名称//执行导入$ docker exec -i CONTRAINER_ANME mysql -u root -pPASSWORD DATABASE_NAME &lt; xxxxx.sql//执行导出$ docker exec CONTRAINER_NAME mysqldump -u root -pPASSWORD DATABASE_NAME [TABLE_NAME] &gt; XXXXX.sql 进入 mysql 容器中进行操作12345678910$ cd laradock$ docker-compose exec mysql bash// 执行导出$ mysqldump -u root -p DATABASE_NAME [TABLE_NAME] &gt; XXXX.sql// 导入1$ mysql -u root -p DATABASE_NAME &lt; xxxx.sql// 导入2$ mysql -u root -p$ use DATABASE_NAME$ source xxxxx.sql docker-compose exec CONTRAINER bash 和 docker exec -i CONTRAINER bash 的区别docker-compose exec mysql bash 可进入 mysql 容器docker exec -i mysql bash 提升 Error: No such container:mysql 解决: docker 命令行中要使用具体的容器名称，容器名称可进入到 laradock 目录下执行 docker ps 命令查看 1234//如通过 `docker ps` 命令看到当前 Docker 中运行的 mysql 容器名称为 `laradock_mysql_1`$ docker exec -it laradock_mysql_1 bash// 等同于$ docker-compose exec mysql bash 查看 Nginx 配置文件路径的方法执行 nginx -t 命令时，Nginx 会去检测配置文件语法，并告知配置文件是否配置正确，同时就显示其配置文件路径。 123$ nginx -tnginx: the configuration file /etc/nginx/nginx.conf syntax is oknginx: configuration file /etc/nginx/nginx.conf test is successful]]></content>
+      <categories>
+        <category>教程</category>
+      </categories>
+      <tags>
+        <tag>PHP</tag>
+        <tag>Docker</tag>
+        <tag>Win10</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[数据库系统与文件系统的区别]]></title>
+    <url>%2F2018%2F04%2F25%2Ffile-data-distinction%2F</url>
+    <content type="text"><![CDATA[文件系统和数据库系统均可以长期保存数据，由数据管理软件管理数据，数据库系统是在文件系统基础上发展而来。 文件系统 文件系统把数据组织成相互独立的数据文件，实现了记录内的结构性，但整体无结构； 在文件系统中，数据冗余度大，浪费存储空间，容易造成数据的不一致； 文件系统中的文件是为某一个特定应用服务的，当要修改数据的逻辑结构时，必须修改应用程序，修改文件结构的定义，数据和程序之间缺乏独立性； 文件系统是操作系统管理文件和存储空间的子系统，主要是分配文件所占的簇、盘块或者建立 FAT、管理空间等； 文件系统是操作系统必须的； 数据库系统 数据库系统实现整体数据的结构化，这是数据库的主要特征之一，也是数据库系统和文件系统的本质区别； 数据库系统中，数据是面向整个系统，数据可以被多个用户、多个应用共享使用，减少了数据冗余； 数据库系统中，通过 DBMS 的两级映像实现了数据的物理独立性和逻辑独立性，把数据的定义从程序中分离出去，减少了应用程序的维护和修改； 数据库系统主要管理数据库的存储、事务以及对数据库的操作； 一般来说数据库系统会调用文件系统来管理自己的数据文件，但也有些数据库系统能够自己管理数据文件，甚至在裸设备上； 数据库系统只是数据库管理和应用必需的； 文件系统和数据库系统之间的区别 文件系统用文件将数据长期保存在外存中，数据库系统用数据库统一存储数据； 文件系统中的程序和数据有一定的联系，数据库系统中的程序和数据分离； 文件系统用操作系统中的存取方法对数据进行管理，数据库系统用 DBMS 统一管理和控制数据； 文件系统实现以文件为单位的数据共享，数据库系统实现以记录和字段为单位的数据共享； 文件系统和数据库系统之间的联系 均为数据组织的管理技术； 均由数据管理软件管理数据，程序与数据之间用存取方法进行转换； 数据库系统是在文件系统的基础上发展而来的；]]></content>
+      <categories>
+        <category>教程</category>
+      </categories>
+  </entry>
+  <entry>
+    <title><![CDATA[MySQL 使用规范]]></title>
+    <url>%2F2018%2F04%2F25%2Fmysql-standard%2F</url>
+    <content type="text"><![CDATA[大数据量高并发的互联网业务，极大影响数据库性能的都不让用。 基本规范 必须使用 InnoDB 存储引擎 支持事务、行级锁、并发性能更好、CPU 及内存缓存页优化使得资源利用率更高 必须使用 UTF-8 字符集 万国码，无需转码，无乱码风险，节省空间 数据表、数据字段必须加入中文注释 明示该字段是干什么的 禁止使用存储过程、视图、触发器、Event 高并发大数据的互联网业务，架构设计思路是”解放数据库 CPU，将计算过转移到服务层“，并发量大的情况下，这些功能很可能将数据库拖死，业务逻辑放到服务层具备更好的扩展性，能够轻易实现”增加机器就加性能“。数据库擅长存储与索引，CPU计算还是上移把 禁止存储大文件或者大照片 数据库不擅长存储文件，大文件和照片存储在文件系统，数据库里存 URI 就行 命令规范 只允许使用内网域名，而不是 IP 连接数据库 线上环境、开发环境、测试环境数据库内网域名遵循命名规范 业务名称：xxx 线上环境：my4396.mysql.orzcn.cn 开发环境：yf4396.mysql.orzcn.cn 测试环境：test4396.mysql.orzcn.cn 从库在名称后加-s标识，备库在名称后加-ss标识 线上从库：my4396sa.mysql.orzcn.cn 库名、表名、字段名：小写，下划线风格，不超过32个字符，必须见名知意，禁止拼音英文混用 表名 t_xxx，非唯一索引名 idx_xxx，唯一索引名 uniq_xxx 表设计规范 单实例表数目必须小于 500 单表列数目必须小于 30 表必须有主键，例如自增主键 主键递增，数据行写入可以提高插入性能，可以避免 page 分裂，减少表碎片提升空间和内存的使用 主键要选择较短的数据类型，InnoDB 引擎普通索引都会保存主键的值，较短的数据类型可以有效的减少索引的磁盘空间，提高索引的缓存效率 无主键的表删除，在 row 模式的主从架构，会导致备库夯住 禁止使用外键，如果有外键完整性约束，需要应用程序控制外键会导致表与表之间耦合，update 与 delete 操作都会涉及相关联的表，十分影响 sql 的性能，甚至会造成死锁。高并发情况下容易造成数据库性能，大数据高并发业务场景数据库使用以性能优先 字段设计规范 必须把字段定义为 NOT NULL 并且提供默认值 null 的列使索引/索引统计/值比较都更加复杂，对MySQL来说更难优化 null 这种类型 MySQL 内部需要进行特殊处理，增加数据库处理记录的复杂性；同等条件下，表中有较多空字段的时候，数据库的处理性能会降低很多 null 值需要更多的存储空间，无论是表还是索引中每行中的 null 的列都需要额外的空间来标识 对 null 的处理时候，只能采用 is null 或 is not null，而不能采用 =、in、&lt;、&lt;&gt;、!=、not in 这些操作符号。如：where name != ‘chen’，如果存在 name 为 null 值的记录，查询结果就不会包含 name 为 null 值的记录 禁止使用 TEXT、BLOB 类型会浪费更多的磁盘和内存空间，非必要的大量的大字段查询会淘汰掉热数据，导致内存命中率急剧降低，影响数据库性能 禁止使用小数存储货币使用整数，小数容易导致钱对不上 必须使用 varchar(20) 存储手机号 涉及到区号或者国家代号，可能出现 +-() 手机号不会去做数学运算 varchar 可以支持模糊查询，例如： like”4396%” 禁止使用 ENUM，可使用 TINYINT 代替 增加新的 ENUM 值要做 DDL 操作 ENUM 的内部实际存储就是整数，并不是自己定义的字符串 索引设计规范 单表索引建议控制在 5 个以内 单索引字段数不允许超过 5 个字段超过 5 个时，实际已经起不到有效过滤数据的作用了 禁止在更新十分频繁、区分度不高的属性上建立索引 更新会变更 B+ 树，更新频繁的字段建立索引会大大降低数据库性能 ”性别“这种区分度不大的属性，建立索引是没有什么意义的，不能有效过滤数据，性能与全表扫描类似 建立组合索引，必须把区分度高的字段放在前面能够更加有效的过滤数据 SQL 使用规范 禁止使用 SELECT *，只获取必要的字段，需要显示说明列属性 读取不需要的列会增加 CPU，IO，NET 消耗 不能有效的利用覆盖索引 使用 SELECT * 容易在增加或者删除字段后出现程序 BUG 禁止使用 INSERT INTO t_xxx VALUES(xxx)，必须显示指定插入的列属性容易在增加或者删除字段后出现程序 BUG 禁止使用属性隐式转换SELECT uid FROM t_user WHERE phone=4396 会导致全表扫描，而不能命中 phone 索引 禁止在 WHERE 条件的属性上使用函数或者表达式SELECT uid FROM t_user WHERE from_unixtime(day)&gt;=’2017-01-15’ 会导致全表扫描正确的写法是：SELECT uid FROM t_user WHERE day&gt;= unix_timestamp(‘2017-01-15 00:00:00’) 禁止负向查询，以及%开头的模糊查询 负向查询条件：NOT、!=、&lt;&gt;、!&lt;、!&gt;、NOT IN、NOT LIKE等，会导致全表扫描 %开头的模糊查询、会导致全表扫描 禁止大表使用 JOIN 查询，禁止大表使用子查询会产生临时表，消耗较多内存与CPU、极大影响数据库性能 禁止使用 OR 条件，必须改为 IN 查询旧版本 MySQL 的 OR 查询是不能命中索引的，即使能命中索引，会让数据库耗费更多的 CPU 帮助实施查询优化 应用程序必须捕获 SQL 异常，并有相应处理 同表的增删字段、索引合并一条 DDL 语句执行，提高执行效率，减少与数据库的交互]]></content>
+      <categories>
+        <category>规范</category>
+      </categories>
+      <tags>
+        <tag>MySQL</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[JD PHP 开发工程师笔试题]]></title>
+    <url>%2F2018%2F04%2F25%2Fjd-interview-question%2F</url>
+    <content type="text"><![CDATA[JD 线下笔试题 基本能力 PHP 7 新特性，哪些语法或特性比较实用？ 如下浮点数为什么计算是57？ 12$f = 0.58;var_dump(intval($f * 100)); //结果输出57 include_once() 和 require_once() 有什么区别? 下列 HTTP 状态码出现的可能原因，如何处理？ 201,301,302,400,404,500,504 实现收货地址增删改查的功能，如何设计数控库表？ 命名空间有啥好处？要如何使用 MVC 架构去开发网站？如果不用会产生什么问题？ 如何配置 PHP 错误日志文件？ 如何拿到用户的 IP ？ 给出下面的例子，如何判断一个数是不是奇数？ 12345$arr = [ "0" =&gt; "Even", "1" =&gt; "Odd",];$check = 13; 给你一个由数字组成的字符串，如何获得他们的总和？ 例如：给你一个字符串 1,2,3,4,5,6,7 如何将这些数字相加，获得总和 如何部署线上代码，是否实践过 CI 自动部署？ 请使用正则表达式拿到页面的编码类型 utf-8 123&lt;!DOCTYPE HTML&gt;&lt;meta http-equiv='Content-Type' content='text/html' charset='utf-8'&gt;&lt;title&gt;测试题&lt;/title&gt; AJAX 如何实现跨域请求？后端安全上需要做什么处理？ private，protect，public 有什么区别？ 如何生成一个唯一的用户 id，避免别人猜测出当前系统的用户量和下一个用户 id？ session 和 cookie 有什么区别？ XSS 注入如何防范？ SQL 注入如何防范？ 服务器常用命令有哪些？如何查看服务器负载？如何判断服务器配置好坏？ 本地是如何搭建开发环境的？是否使用过 Docker 自己搭建开发环境？ 假设你必须要实现一个类 Dragonball，这个类有一个属性 ballCount（初始值为0）和一个方法 iFoundaBall，当通过类的实例调用 iFoundaBall 方法时，ballCount 会递增 1，当 ballCount 等于 7 的时候，iFoundaBall 会输出 你可以输出一个愿望，并且该实例的 ballCount 重置为 0，你会如何实现这个类？ 如何生成唯一的订单号，满足尽可能短，能够看出是哪一天的订单？ 框架熟悉程度 了解并使用过哪些框架？写过哪些东西？各自有什么优缺点？ 类自动加载是如何实现的？ http://demo.dev/articles/22 在框架里如何获取 url 中 22 这个值？ 依赖注入有什么好处？请举个使用实例 工具和应用git 回答 从哪些渠道详细了解过 git 的原理，常用操作？与 svn 的对比？ git fetch 与 git pull 有什么区别？ 把文件添加到索引区后又修改了文件，如何丢弃更改（恢复至之前添加到索引去的状态）？ 安装并使用过哪些 PHP 程序？觉得哪个程序好用，易用？ 请简述如何分析 nginx 日志以找出某个 IP 下访问量前 10 的 url？ 除了 PHP，是否用其他编程语言做出过小工具或成熟应用？ 有 a, b, c, d 四个任务，任务用户可以重复做，但任务是每天凌晨3点刷新的（如果当天0-3点做过一次任务，当天3-24点还可以再做一次，如果当天是3-24点做的任务，只能第二天3点后再做任务），任务做完后可以去 领奖 API 领奖，用户访问 领奖 API时会传递任务id，另外提供以下信息 用户访问 领奖 API 的时间不确定，任何时间都有可能 请确保用户每天只能领奖一次，做完任务才能领奖 如果昨天 3 点至今天 3 点期间用户做了任务，但未领奖，今天 3 点后就不能领取昨天的奖励了 请问这个功能如何设计数据库表结构，领奖 API 如何判断当前用户能不能领奖？请写下必须的 SQL 和 PHP 代码 加分项测试以下测试，了解或者拥有就打钩 PSR 规范 PSR 2 PSR 4 PSR 7 个人影响力 拥有个人博客 拥有 GitHub 账号 拥有 Stack Overflow 账号 英语能力 通过英语四级 通过英语六级 其他 了解 Markdown 搭建过 VPS 以访问国外网站 使用抓包工具 fiddler 或者 charles 分析过 HTTPS 协议的网站或者 API]]></content>
+      <categories>
+        <category>interview</category>
+      </categories>
+      <tags>
+        <tag>PHP</tag>
+        <tag>JD</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[Ubuntu 打不开 Steam]]></title>
+    <url>%2F2018%2F03%2F29%2Fsteam-ubuntu%2F</url>
+    <content type="text"><![CDATA[删除 libstdc++.so.6 1rm ~/.steam/steam/ubuntu12_32/steam-runtime/i386/usr/lib/i386-linux-gnu/libstdc++.so.6 扩展阅读]]></content>
+      <categories>
+        <category>教程</category>
+      </categories>
+      <tags>
+        <tag>Ubuntu</tag>
+        <tag>Steam</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[Ubuntu 16.04 创建无线热点]]></title>
+    <url>%2F2018%2F03%2F27%2Fubuntu-wifi%2F</url>
+    <content type="text"><![CDATA[点击右上角网络图标 点击编辑连接 选择 Wi-Fi，点击新建 点击 增加 选中 Wi-Fi，编辑信息 123SSID: &lt;WiFi_name&gt;模式: 热点# 其他选项默认 选中 Wi-Fi 安全性，编辑信息 12安全：WPA及WPA2个人密码：&lt;password&gt; 选中IPv4设置，编辑信息 1方法：与其他计算机共享 计算机连接有线网 点击右上角网络图标，点击连接到隐藏网络选项，选择创建的连接 点击右上角网络图标，点击连接信息，显示创建的连接，表示连接成功]]></content>
+      <categories>
+        <category>教程</category>
+      </categories>
+      <tags>
+        <tag>Ubuntu</tag>
+        <tag>WiFi</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[Mattermost 自定义斜杠命令]]></title>
+    <url>%2F2018%2F03%2F25%2Fmattermost-custom-slash-command%2F</url>
+    <content type="text"><![CDATA[在 Mattermost 中集成自定义斜杠命令 问题 输入命令报错 带触发&lt;command&gt;的命令失败 查看日志，显示错误信息 address forbidden 在配置文件添加 URL，使其允许访问 12# ~/mattermost/config/config.json"AllowedUntrustedInternalConnections": "127.0.0.1",]]></content>
+      <categories>
+        <category>教程</category>
+      </categories>
+      <tags>
+        <tag>Mattermost</tag>
+        <tag>slash</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[在 Vscode 中使用 Python 的 Virtualenv]]></title>
+    <url>%2F2018%2F03%2F24%2Fvscode-python-virtualenv%2F</url>
+    <content type="text"><![CDATA[更新 Python 扩展 打开命令面板 Ctrl + Shift + P，输入 Python: Select Interpreter，回车 选择 Virtualenv 的 Python 解释器]]></content>
+      <categories>
+        <category>教程</category>
+      </categories>
+      <tags>
+        <tag>Vscode</tag>
+        <tag>Python</tag>
+        <tag>Virtualenv</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[利用 Virtualenv 创建 Python 运行环境]]></title>
+    <url>%2F2018%2F03%2F21%2Fvirtualenv%2F</url>
+    <content type="text"><![CDATA[利用 Virtualenv 为一个应用创建一套隔离的 Python 运行环境 安装 1pip3 install virtualenv 创建应用目录 12sudo mkdir applicationcd application 创建运行环境 123virtualenv venv# 指定 Python 版本virtualenv --python=/usr/bin/python2.6 venv 进入运行环境 1source venv/bin/activate 退出运行环境 1deactivate 扩展阅读 文档 教程]]></content>
+      <categories>
+        <category>教程</category>
+      </categories>
+      <tags>
+        <tag>Python</tag>
+        <tag>Virtualenv</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[博文命名规范]]></title>
+    <url>%2F2018%2F03%2F21%2Fblog-name-standard%2F</url>
+    <content type="text"><![CDATA[统一小写字母 多个单词用 - 隔开]]></content>
+      <categories>
+        <category>规范</category>
+      </categories>
+  </entry>
+  <entry>
+    <title><![CDATA[Ubuntu 16.04 LTS 安装 Mattermost]]></title>
+    <url>%2F2018%2F03%2F17%2FMattermost%2F</url>
+    <content type="text"><![CDATA[在 Ubuntu 16.04 LTS 环境下搭建 Mattermost 服务 安装 Mattermost 下载 Mattermost 1wget https://releases.mattermost.com/X.X.X/mattermost-X.X.X-linux-amd64.tar.gz 解压文件 1tar -xvzf mattermost*.gz 移动项目到有权限的目录 1sudo mv mattermost /home/&lt;user_name&gt; 创建存储目录文件 1sudo mkdir /home/&lt;user_name&gt;/mattermost/data 配置数据库 123# ~/mattermost/config/config.json&quot;DriverName&quot; &quot;mysql&quot;,&quot;DataSource&quot;: &quot;&lt;user_name&gt;:&lt;user_password&gt;@tcp(&lt;host-name-or-IP&gt;:3306)/mattermost?charset=utf8mb4,utf8&amp;readTimeout=30s&amp;writeTimeout=30s&quot; 创建数据库 12create database mattermost;exit; 配置成守护进程 创建 Systemd 配置文件 1sudo touch /lib/systemd/system/mattermost.service 编辑配置文件 123456789101112131415161718[Unit]Description=MattermostAfter=network.targetAfter=mysql.serviceRequires=mysql.service[Service]Type=simpleExecStart=~/mattermost/bin/platformRestart=alwaysRestartSec=10WorkingDirectory=~/mattermostUser=&lt;user_name&gt;Group=&lt;user_group&gt;LimitNOFILE=49152[Install]WantedBy=mysql.service Systemd 加载新的单元 1sudo systemctl daemon-reload 检测单元是否加载 1sudo systemctl status mattermost.service 启动服务 1sudo systemctl start mattermost.service 设置开机启动 1sudo systemctl enable mattermost.service 设置 设置语言 登录 - 主菜单 - 账号设置 - 显示 - 语言 - 简体中文 设置站点 URL 在系统控制台的常规项中，点击配置 在站点 URL 字段填写 URL 扩展阅读 daemon Systemd Systemd Document]]></content>
+      <categories>
+        <category>教程</category>
+      </categories>
+      <tags>
+        <tag>Ubuntu</tag>
+        <tag>Mattermost</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[二分查找]]></title>
+    <url>%2F2018%2F03%2F06%2FbinarySearch%2F</url>
+    <content type="text"><![CDATA[二次查找最基本的 Java实现 12345678910111213141516171819202122232425262728package cn.orzcn.www;public class Search &#123; public static void main(String[] args) &#123; int[] array = &#123;1,2,3,4,5,6&#125;; int position = binarySearch(array, 7); System.out.println(position); &#125; public static int binarySearch(int[] array, int key) &#123; if (array == null || array.length == 0) &#123; return -1; &#125; int left = 0; int right = array.length - 1; while (left &lt;= right) &#123; int mid = (left + right) / 2; if (array[mid] == key) return mid; if (array[mid] &lt; key) &#123; left = mid + 1; &#125; else &#123; right = mid - 1; &#125; &#125; return -1; &#125;&#125;]]></content>
+      <categories>
+        <category>算法</category>
+      </categories>
+      <tags>
+        <tag>面试</tag>
+        <tag>查找</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[快速排序]]></title>
+    <url>%2F2018%2F03%2F06%2FquickQort%2F</url>
+    <content type="text"><![CDATA[快速排序最基本的 Java 实现 1234567891011121314151617181920212223242526272829303132333435package cn.orzcn.www;public class Sort &#123; public static void main(String[] args) &#123; int[] array = &#123;1,9,2,8,3,7,4,6,5&#125;; qSort(array); for (int i = 0; i &lt; array.length; i++) &#123; System.out.println(array[i]); &#125; &#125; public static void qSort(int[] array) &#123; if (array == null || array.length == 0) return; qSort(array, 0, array.length - 1); &#125; public static void qSort(int[] array, int left, int right) &#123; if (left &gt;= right) return; int l = left; int r = right; int key = array[left]; //数组左边的值赋予 key，左边的位置可以放入其他值 while ( l &lt; r) &#123; while (array[r] &gt;= key &amp;&amp; l &lt; r) //从右边开始遍历，因为从左边开始，最后的值比较不到 r --; array[l] = array[r]; //右边的值赋予左边的位置，右边的位置可以放入其他值 while (array[l] &lt;= key &amp;&amp; l &lt; r) l ++; array[r] = array[l]; //左边的值赋予右边的位置，左边的位置可以放入其他值 &#125; array[l] = key; //最后剩下左边的位置，所以 key 值赋予左边的位置 qSort(array, left, l - 1); qSort(array, l + 1, right); &#125;&#125;]]></content>
+      <categories>
+        <category>算法</category>
+      </categories>
+      <tags>
+        <tag>Java</tag>
+        <tag>面试</tag>
+        <tag>排序</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[Java 命名规范]]></title>
+    <url>%2F2018%2F03%2F06%2FJavaStandard%2F</url>
+    <content type="text"><![CDATA[Java 常用的命名规范整理 包的命名 由小写单词组成 格式：域名反转.包名 类的命名 首字母大写，其余字母均小写 由多个单词组成，则每个单词的首字母均应为大写 包含单词缩写，则这个单词每个字母均应大写 命名尽量选择名词 方法的命名 第一个单词以小写字母开头 后面的单词则用大写字母开头]]></content>
+      <categories>
+        <category>规范</category>
+      </categories>
+      <tags>
+        <tag>Java</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[Ubuntu 系统更换源]]></title>
+    <url>%2F2018%2F03%2F03%2Fubuntu-source%2F</url>
+    <content type="text"><![CDATA[Ubuntu 系统更换镜像源 进入文件所在目录 1cd /etc/apt 对 sources.list 文件进行备份 12# .bak 文件扩展名，表示备份文件sudo cp sources.list sources.list.bak 修改 sources.list 文件 1sudo vim sources.list 删除原来的内容，选择一个镜像源的内容拷贝进去 更新 apt 1sudo apt-get update Ubuntu16.04 LTS 阿里源 1234567891011121314151617deb-src http://archive.ubuntu.com/ubuntu xenial main restricted #Added by software-propertiesdeb http://mirrors.aliyun.com/ubuntu/ xenial main restricteddeb-src http://mirrors.aliyun.com/ubuntu/ xenial main restricted multiverse universe #Added by software-propertiesdeb http://mirrors.aliyun.com/ubuntu/ xenial-updates main restricteddeb-src http://mirrors.aliyun.com/ubuntu/ xenial-updates main restricted multiverse universe #Added by software-propertiesdeb http://mirrors.aliyun.com/ubuntu/ xenial universedeb http://mirrors.aliyun.com/ubuntu/ xenial-updates universedeb http://mirrors.aliyun.com/ubuntu/ xenial multiversedeb http://mirrors.aliyun.com/ubuntu/ xenial-updates multiversedeb http://mirrors.aliyun.com/ubuntu/ xenial-backports main restricted universe multiversedeb-src http://mirrors.aliyun.com/ubuntu/ xenial-backports main restricted universe multiverse #Added by software-propertiesdeb http://archive.canonical.com/ubuntu xenial partnerdeb-src http://archive.canonical.com/ubuntu xenial partnerdeb http://mirrors.aliyun.com/ubuntu/ xenial-security main restricteddeb-src http://mirrors.aliyun.com/ubuntu/ xenial-security main restricted multiverse universe #Added by software-propertiesdeb http://mirrors.aliyun.com/ubuntu/ xenial-security universedeb http://mirrors.aliyun.com/ubuntu/ xenial-security multiverse]]></content>
+      <categories>
+        <category>教程</category>
+      </categories>
+      <tags>
+        <tag>Ubuntu</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[修改 Ubuntu 下的 hosts 文件]]></title>
+    <url>%2F2018%2F03%2F02%2Fubuntu-hosts%2F</url>
+    <content type="text"><![CDATA[如何修改 Ubuntu 下的 hosts 文件 打开 hosts 文件 1sudo vim /etc/hosts 添加 IP 与域名映射 123# hosts 文件# 格式&lt;IP&gt; &lt;HOSTNAME&gt;.&lt;DOMAIN&gt; &lt;ALIAS&gt; 重启网络 1sudo /etc/init.d/networking restart]]></content>
+      <categories>
+        <category>教程</category>
+      </categories>
+      <tags>
+        <tag>Ubuntu</tag>
+        <tag>hosts</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[初学 JavaScript 遇到的问题]]></title>
+    <url>%2F2018%2F02%2F23%2FJavaScript%2F</url>
+    <content type="text"><![CDATA[初学 JavaScript 遇到的问题 JavaScript 单独文件 把 JavaScript 代码写成单独的文件是为了利用客户端缓存，第一请求下载下来，之后可以直接在客户端浏览器缓存中拿。 经常用的 JavaScript 代码 写成单独的文件，可以实现代码复用 放在 &lt;/body&gt; 前 放入 &lt;head&gt;&lt;/head&gt; 的 JavaScript 代码是页面加载前就运行的，当 JavaScript 代码量大，导致页面很慢加载出来，影响用户体验。 部分 JavaScript 代码 需要在页面载入的时候执行，如果放在 &lt;head&gt;&lt;/head&gt; 里，很可能访问不到页面的标签。因为页面是从上到下解析的，但代码访问 &lt;body&gt;&lt;/body&gt; 某些标签时，可能标签还没有加载出来。 注意 JavaScript 代码的加载顺序 前面的代码块是无法引用后面的代码块，比如当你 引用 jQuery.js 文件时，在前面写 $(&#39;#id&#39;) 等代码，会报 $ is not defined 错误。]]></content>
+      <categories>
+        <category>教程</category>
+      </categories>
+      <tags>
+        <tag>JavaScript</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[Windows 10 Linux 子系统]]></title>
+    <url>%2F2018%2F02%2F23%2FWindows-linux%2F</url>
+    <content type="text"><![CDATA[Windows 10 安装 Linux 子系统 依次点击 设置 更新与安全 针对开发人员 选中 开发人员模式 依次点击 控制面板 程序 程序与功能 启动或关闭 Windows 功能 勾选 适用于 Linux 的 Windows 子系统(Beta) 重启电脑 开始安装 1lxrun /install /y 进入 Ubuntu 123bash# 默认 root 登陆，设置密码passwd &lt;password&gt; 根目录 C:Users\&lt;username&gt;\AppData\Local\lxss\rootfs root 目录 C:Users\&lt;username&gt;\AppData\Local\lxss\root 访问 Windows 目录 1cd /mnt/&lt;盘符&gt;/&lt;目录&gt;]]></content>
+      <categories>
+        <category>教程</category>
+      </categories>
+      <tags>
+        <tag>Windows</tag>
+        <tag>Linux</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[Windows 安装 MySQL]]></title>
+    <url>%2F2018%2F02%2F16%2FWindows-install-MySQL%2F</url>
+    <content type="text"><![CDATA[在 Windows 环境下安装 MySQL 安装步骤 解压 mysql-5.7.20-winx64.zip 至 e:\software\mysql 将e:\software\mysql\bin添加至系统变量path中，使得 cmd 中可以直接运行 bin 文件夹下的程序 在 e:\software\mysql 目录下新建my.ini，按情况修改配置 初始化 data 目录 将mysql安装为windows服务，然后启动mysql Mysql配置123456789101112131415161718192021222324252627# my.ini[mysqld]# 设置mysql的安装目录basedir = e:/software/mysql# 设置mysql的数据存放目录datadir = e:/software/mysql/data# 允许的最大连接数，设置过小会出现Too many connections错误max_connections = 2000# 设置mysql接收的数据包大小，设置过小会出现mysql has gone away错误max_allowed_packet = 10M# 设置SQL mode为严格sql_mode=NO_ENGINE_SUBSTITUTION,STRICT_TRANS_TABLES# 设置默认字符集character-set-server=utf8 初始化data目录1mysqld --defaults-file=e:\software\mysql\my.ini --initialize --user=mysql 生成 data 目录后，会自动生成一个临时的 root 密码，密码存放在 mysql 错误日志里 这个 root 密码被标记为过期，第一次使用该密码登录 MySQL 时会被要求修改密码 将 MySQL 安装为 windows 服务12C:\Users\Administrator&gt; mysqld --install mysql --defaults-file=e:\software\mysql\my.ini# mysql服务时，一定要切换到mysql安装目录的bin目录下，不管你是否配置环境变量，否则在安装完后启动服务会报 `系统找不到指定的文件` 的 错误 启动mysql1C:\Users\Administrator&gt; net start mysql]]></content>
+      <categories>
+        <category>教程</category>
+      </categories>
+      <tags>
+        <tag>MySQL</tag>
+        <tag>Windows</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[MySQL 常用的命令]]></title>
+    <url>%2F2018%2F02%2F15%2FMySQL%2F</url>
+    <content type="text"><![CDATA[在开发中，MySQL 常用的命令 导入文件：source 12use &lt;db&gt;;source &lt;file&gt;;]]></content>
+      <categories>
+        <category>教程</category>
+      </categories>
+      <tags>
+        <tag>MySQL</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[修改 shell 打开的位置]]></title>
+    <url>%2F2018%2F02%2F15%2Fshell%2F</url>
+    <content type="text"><![CDATA[修改 Windows 下 shell 打开的起始位置 打开cmd所在位置。 点击右键，选择属性。 把起始位置修改成你想的位置即可]]></content>
+  </entry>
+  <entry>
+    <title><![CDATA[简易的开发流程]]></title>
+    <url>%2F2018%2F02%2F15%2Fprocess%2F</url>
+    <content type="text"><![CDATA[新人入职后的简易开发流程 账号以及开发工具 搭建开发环境 阅读产品需求规格说明书 看原型、UI、前端模板 页面以 UI 为准 敲代码]]></content>
+      <categories>
+        <category>教程</category>
+      </categories>
+  </entry>
+  <entry>
+    <title><![CDATA[Git 代码提交说明简易规范]]></title>
+    <url>%2F2018%2F02%2F15%2Fcommit%2F</url>
+    <content type="text"><![CDATA[基本格式123git commit -m "&lt;type&gt;:&lt;subject&gt;"# type 用于说明 commit 的类别# subject 是 commit 目的的简短描述，不超过50个字符 type feat：新功能（feature） fix：修补bug docs：文档（documentation） style： 格式（不影响代码运行的变动） refactor：重构（即不是新增功能，也不是修改bug的代码变动） test：增加测试 chore：构建过程或辅助工具的变动]]></content>
+      <categories>
+        <category>规范</category>
+      </categories>
+      <tags>
+        <tag>Git</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[PHP 学习]]></title>
+    <url>%2F2018%2F02%2F15%2FPHPer%2F</url>
+    <content type="text"><![CDATA[PHP 学习指南 PHP 开发环境最佳指南：Laradock 在线查询多个语言的文档 PHP: The Right Way PHP Best Practices]]></content>
+  </entry>
+  <entry>
+    <title><![CDATA[工具集]]></title>
+    <url>%2F2018%2F02%2F15%2Ftool%2F</url>
+    <content type="text"><![CDATA[开发中常用的工具集 Phpstorm JetBrains 公司开发的一款商业的PHP 集成开发工具 VSCode 微软推出的跨平台编辑器 FreeCommander 一个免费的用于Windows（官方支持2000、XP和Vista）系统的资源管理器 Postman 一款功能超级强大的用于发送HTTP 请求的Chrome插件 Docker For Windows 包括在Windows系统上运行Docker所需的一切 MySQL 一个开放源代码的关系数据库管理系统 Shadowsocks 科学上网工具 ShadowsocksR 加强了混淆功能的科学上网工具 DNSAgent 一个在 Windows 上对 DNS 请求进行过滤的装置 Ditto 是Windows 下一款免费开源的剪贴板增强软件 Cmder 一款Windows环境下非常简洁美观易用的cmd替代者 Git for Windows 包含图形化和命令行版本的 Git Navicat 强大的数据库管理和设计工具]]></content>
+      <categories>
+        <category>教程</category>
+      </categories>
+  </entry>
+  <entry>
+    <title><![CDATA[VSCode 使用]]></title>
+    <url>%2F2018%2F02%2F15%2FVSCode%2F</url>
+    <content type="text"><![CDATA[在开发过程中，实践 VSCode 编辑器 快捷键 新建窗口：Ctrl + Shift + N 打开文件夹: Ctrl + K Ctrl + O 关闭文件夹: Ctrl + K F 向下插入一行： Ctrl + Enter 打开文件： Ctrl + O 文件另存为：Ctrl + Shift + S 打开/关闭终端： Ctrl + ` 替换：Ctrl + H 全部替换：Ctrl + Alt + Enter 选中：Ctrl + D 在当前目录下新建文件：Ctrl + Alt + N 隐藏右侧的预览面板 1&quot;editor.minimap.enabled&quot;: false, 恢复：Ctrl + Y 删除行：Ctrl + Shift + K 问题问题一 Visual Studio Code 无法监视这个大型工作区的文件变化。请访问说明链接解决此问题。 说明链接解决 查看监控文件的限制 1cat /proc/sys/fs/inotify/max_user_watches 备份配置文件 1sudo cp /etc/sysctl.conf /etc/sysctl.conf.bak 打开配置文件 /etc/sysctl.conf，添加配置 1fs.inotify.max_user_watches=524288 重新加载配置 1sudo sysctl -p]]></content>
+      <categories>
+        <category>教程</category>
+      </categories>
+      <tags>
+        <tag>VSCode</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[Windows]]></title>
+    <url>%2F2018%2F02%2F15%2FWindows%2F</url>
+    <content type="text"><![CDATA[Windows 常用的快捷方式 关闭窗口: Alt + F4 新建文件夹: Ctrl + Shift + N 待机：win + L]]></content>
+      <categories>
+        <category>教程</category>
+      </categories>
+      <tags>
+        <tag>Windows</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[phpstorm]]></title>
+    <url>%2F2018%2F02%2F15%2Fphpstorm%2F</url>
+    <content type="text"><![CDATA[在开发过程中，phpstorm 常用的快捷方式 全局搜索：Ctrl + Shift + F 关闭编辑页面：Ctrl + F4 向下插入一行：Shift + Enter 选中：Ctrl + W 删除当前行：Ctrl + Y live template 替换：Ctrl + R 代码格式化：Ctrl + Alt + L 还原：Ctrl + Shift + Z]]></content>
+      <categories>
+        <category>教程</category>
+      </categories>
+      <tags>
+        <tag>phpstorm</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[工作细节]]></title>
+    <url>%2F2018%2F02%2F15%2Fdetail%2F</url>
+    <content type="text"><![CDATA[工作中的微小细节，决定你的工作态度 看文档的时候，遇到不懂的问题或者有歧义的步骤，更新文档 机会机会，就像昨天的内购大礼包，今天就没有了 早睡，不要熬夜，保持头脑清晰，才能清晰地思考问题 不要回避问题 及时沟通 任务进度用完成百分比表示,不要用模糊的量词 向他人分享或交流之后向对方发份总结,不要讲完就完事 当项目没人推进时，跳出来负责，推动进度，要有 owner 精神]]></content>
+      <categories>
+        <category>随笔</category>
+      </categories>
+  </entry>
+  <entry>
+    <title><![CDATA[API 设计规范]]></title>
+    <url>%2F2018%2F02%2F15%2FJSON-API%2F</url>
+    <content type="text"><![CDATA[总结如下 2XX状态码代表成功, 4XX代表出现错误, 符合 HTTP 状态码规范 请求与响应默认使用 JSON 格式, 响应内容不允许出现 null 响应内容分两种, data和errors只能出现一个, 客户端可以通过检查响应内容里有没有errors来判断服务端是否处理完成请求, 具体示例如下 处理完成时 12345678910&#123; "data": &#123; "module_name": "Test", "name": "测试", "is_independent": 0, "app_version": "6.2.1", "developer": "cht", "id": 1 &#125;&#125; 出错时 12345678&#123; "errors": [ &#123; "field": "module_name", "message": "module already exists" &#125; ]&#125; 4 - API 设计遵循 RESTful 规范 5 - 版本控制 大版本号放在 url 中, 不放在 header 中, 小版本号可以使用 header, 例如Accept: application/json; version=v1.1 客户端在请求时，不能所有 API 都加上 Accept header, 这样能避免 API 版本升级过快, 例如某个 API 变成 1.1 版本了，如果所有的 API 都变成了 1.1 了，那下次另外一个 API 想变动了，那整体的 API 版本得变成 1.2 了 6 - 国际化, 如果文案要做多语言处理，客户端可以上传Accept-Language header 7 - GET 操作, URL 参数默认是必须的, 如果是可选的会有optional标识, 其他操作, 请求和响应默认都是可选的, 如果是必须的会有required标识 扩展阅读 理解 RESTful 架构 RESTful API 设计指南 理解OAuth 2.0]]></content>
+      <tags>
+        <tag>JSON</tag>
+        <tag>API</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[CMD 常用命令]]></title>
+    <url>%2F2018%2F02%2F13%2Fcmd%2F</url>
+    <content type="text"><![CDATA[Windows 系统 常用的 CMD 命令 CMD 命令 删除目录：rmdir 123rmdir /s/q &lt;directory&gt;# /s 表示删除所有子目录和文件# /q 表示在删除文件或目录时，不要问我 yes or no 的动作 新建目录：mkdir 列出文件和目录：dir 改变目录：cd 删除文件：del 查看文档树结构：tree 新建文件： 1type NUL&gt;&lt;file&gt;]]></content>
+      <categories>
+        <category>教程</category>
+      </categories>
+      <tags>
+        <tag>Windows</tag>
+        <tag>CMD</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[日常生活作息]]></title>
+    <url>%2F2018%2F02%2F07%2Fdaily%2F</url>
+    <content type="text"><![CDATA[自律遵循法度，自我约束。 《左传·哀公十六年》：“呜呼哀哉！尼父，无自律。” 唐张九龄《贬韩朝宗洪州刺史制》：“不能自律，何以正人？” 宋苏辙《西掖告词》之十五：“朕方以恭俭自居，以法度自律，宜得慎静之吏，以督缮治之功。” 明李东阳《石公墓志铭》：“虽居官久，家无赢赀，亦以俭自律，不少变。” 早上 刷牙、洗脸、上厕所、洗头 有时间冲个澡 看会英语书 吃早饭 中午 吃午饭 散会步 休息一会 晚上 下完班先洗个澡 顺便思考下待会做什么 把衣服也洗了 不要超过12点睡觉]]></content>
+      <categories>
+        <category>随笔</category>
+      </categories>
+  </entry>
+  <entry>
+    <title><![CDATA[初始化 Git]]></title>
+    <url>%2F2018%2F02%2F05%2FinitGit%2F</url>
+    <content type="text"><![CDATA[初始化 Git 的一般步骤。 配置信息123git config --global user.name "Firstname lastname"git config --global user.email "your_email@example.com"git config --global color.ui auto 配置信息保存在 “~/.gitconfig” 文件里 设置 SSH Key123456$ ssh-keygen -t rsa -C "your_email@example.com"Generation public/private rsa key pair.Enter file in which to save the key(/Users/your_user_directory/.ssh/id_rsa): #按回车键Enter passphrase (empty for no passphrase): #输入密码Enter same passphrase again: #再次输入密码 id_rsa 文件是私有密钥，id_rsa.pub 是公开密钥 添加公开密钥 点击账户设定按钮（Settings） 选择 SSH and GPG keys 点击 New SSH key Title 输入密钥名称 Key 粘贴 id_rsa.pub 内容 收到提示“公共密钥添加完成“的邮件 认证和通信 123ssh -T git@github.com# 出现如下结果即为成功Hi hirocastest!You've successfully authenticated,but GitHub does no provide shell access.]]></content>
+      <categories>
+        <category>教程</category>
+      </categories>
+      <tags>
+        <tag>Github</tag>
+        <tag>Git</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[数据库设计规范]]></title>
+    <url>%2F2018%2F02%2F05%2FdbDesignSpecification%2F</url>
+    <content type="text"><![CDATA[数据库设计过程中提倡的一些规范。 一般规则 unsigned，not null, 禁止字段定义出现允许 null 的情况 不要用非负整形，非负由程序控制 比如把-1存到非负字段里，会变成很大的数，在判断用户积分大小的时候，大数比负值危害更大 字段都必须有默认值，必须有注释，注释可以方便后续开发人员理解 字段，表名均小写，避免中文拼音，单词间使用下划线相连 字段，表名用单数，这样简单，便利，举个例子，你有一个袋子，里面有好多个苹果，你会说这是个苹果袋。但无论里面有0，1，百万个苹果，它依然是个袋子。表也是如此，表名需要描述清楚，表里面包含的对象，而非有多少个数据 表命名有前缀，默认 utf-8 编码，涉及到emoji表情的表，需要设置为 utf8mb4（字段名正常情况下没有前缀） 数据库使用 InnoDB 引擎, 不要使用 MyISAM 引擎，InnoDB 支持事务，支持行锁定 每个表尽量有个自增id作为主键，方便增删改查 每个表都尽量有创建时间和更新时间 status 状态标记： -2删除 -1审核不通过 0初始状态 1审核通过， 删除操作均为标记删除,即update table set status = -1，很少用到delete, 尽可能的保留数据 字段存储类型的选用 整数类型，特别小的用 tinyint, 一般用 int，特别大的用 bigint, 默认为0 小数类型，对于钱等需要确保精度的，用 decimal，对于位数比较短一般精度的，用 float，例如打分,9.6, 7.3 字符串类型，用 varchar, 默认为空字符串 文本类型，用 text，比如文章内容 时间类型，用 datetime, 默认为1000-01-01 00:00:00 日期类型，用 date, 比如1992-01-12, 默认为1000-01-01 使用 int(10) 存时间戳 使用 char(15) 存储 IP，当前 IPV6 还很不普及，暂不考虑 关于选项(类似两个选项或者三个)，使用数字代替，比如 1 代表啥，2代表啥，因为不是所有的数据库都支持 enum 常用字段的定义 字段命名 字段类型 字段描述 created_at datetime 创建时间 updated_at datetime 更新时间 founder_id int 创建人id updater_id int 更新人员id current_time int(10） 当前时间 数据表结构更新路程本地(可选)(local) -&gt; 开发环境(dev) -&gt; 测试环境(test) -&gt; 生产环境(production)]]></content>
+      <categories>
+        <category>规范</category>
+      </categories>
+      <tags>
+        <tag>MySQL</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[First Code Review]]></title>
+    <url>%2F2018%2F02%2F04%2FFirst-Code-Review%2F</url>
+    <content type="text"><![CDATA[第一次 Code Review 的总结 代码模板 建议不用花括号 命名规范 bootstrap 类名 是否有 bootstrap 自带的类名代替 style .gitignore Yii response api 格式 参量规范 代码重复 缩进常用]]></content>
+      <categories>
+        <category>代码</category>
+      </categories>
+      <tags>
+        <tag>Code Review</tag>
+        <tag>PhpStorm</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[搭建简易的 JD 首页之分享总结]]></title>
+    <url>%2F2018%2F02%2F04%2Fshare%2F</url>
+    <content type="text"><![CDATA[主要总结在分享中该注意的细节。 提出需求或痛点，抛出观点 局限问题衍生其他开放的话题 不涉及编程语言 回避敏感话题 旨在经验分享，扩展视野 不要往培训方向讲 重点：分享之后给听众一份文字的总结，不要单单讲完就完事 针对某个点深入探讨]]></content>
+      <categories>
+        <category>随笔</category>
+      </categories>
+  </entry>
+  <entry>
+    <title><![CDATA[Font-Awesome 简易使用]]></title>
+    <url>%2F2018%2F02%2F04%2FFont-Awesome%2F</url>
+    <content type="text"><![CDATA[一套绝佳的图标字体库和CSS框架 简易步骤 下载 官网 把字体文件夹复制到项目下 把 font-awesome.css 文件复制到项目下 编辑 font-awesome.css 文件，修改字体文件夹的路径 查看示例开始使用 Font-Awesome 12345678910&lt;html&gt;&lt;head&gt; ... &lt;link rel="stylesheet" href="font-awesome.css"&gt; ...&lt;/head&gt;&lt;body&gt; &lt;i class="icon"&gt;&lt;/i&gt;&lt;/body&gt;&lt;/html&gt;]]></content>
+      <categories>
+        <category>教程</category>
+      </categories>
+      <tags>
+        <tag>Font-Awesome</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[Markdown and VS Code]]></title>
+    <url>%2F2018%2F02%2F03%2FMarkdown-and-VS-Code%2F</url>
+    <content type="text"><![CDATA[VS Code 搭建 Markdown 编辑环境,并编译成 HTML 文件. Markdown 扩展markdownlint检查 MD 文档的语法问题. Markdown Theme Kit提供 Markdown 颜色主题. Markdown TOC生成 MD 文档内容的目录. Markdown Shortcuts提供写 MD 文档的一些快捷键和指令. Markdown 预览Ctrl + Shift + V新建编辑窗口预览 Ctrl + K V打开侧边预览 编译成 HTML 文件下载 Markdown 编译器1npm install -g markdown-it 创建 MD 文档创建 task.json1234567891011121314151617&#123; // See https://go.microsoft.com/fwlink/?LinkId=733558 // for the documentation about the tasks.json format "version": "2.0.0", "tasks": [ &#123; "label": "Compile Markdown", "type": "shell", "command": "markdown-it sample.md -o sample.html", "problemMatcher": [], "group": &#123; "kind": "build", "isDefault": true &#125; &#125; ]&#125; 自动化编译未完待续]]></content>
+      <categories>
+        <category>教程</category>
+      </categories>
+      <tags>
+        <tag>Markdown</tag>
+        <tag>VS Code</tag>
+        <tag>HTML</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[不知道第几次被拒绝了]]></title>
+    <url>%2F2018%2F01%2F31%2Frefuse%2F</url>
+    <content type="text"><![CDATA[在京东实习了一个多月后,被校招名额已满为由拒绝了. 心态有点崩,突然有种想立即辞职回家的冲动.其实,这也在我的意料之中,本来就是打算来京东混点经验的,抱着万一能转正的心情,从大老远的广州跑到北京. 今天,leader找我聊了会,才意识到在某些方面,我确实做得不够好.这不关乎编程能力的问题,当然被劝退可能是我太菜了,英语又不好的原因有关,菜是原罪. 在其他方面,我确实应该做得更好,这里做下总结: 搜索 遇到不懂的问题,先思考再google.如果google不出来,就立即去问,不要犹豫.不要在该不该问问题的身上浪费时间.如果因为问题卡住了,自己又解决不了,会严重影响项目的进度. 总结 在项目过程中遇到的问题,需要google的,或者需要看教程的,解决完之后,把解决问题的方案或者流程文档化,方便下次使用的时候不用去搜.不要因为赶项目进度,把问题解决后就跳过.只有不断地总结总结,效率才会提升上去,不会再犯同样的错误. 想法 在项目过程中,如果存在某些重复性地操作,应该思考用什么方法使它能够自动化,让电脑代替人去做.这同样是提升效率的一种方式.当你遇到这种情况,主动提出自己的想法或者需求,实现它,使它成为一种工具.经过不断的维护以及版本迭代,工具就成为一个产品. 论程序员的产品是怎样生成的! 沟通 表达能力不好怪我咯! 最后,洗洗睡吧,明天又得开始找工作了.]]></content>
+      <categories>
+        <category>随笔</category>
+      </categories>
+  </entry>
+  <entry>
+    <title><![CDATA[搭建个人博客]]></title>
+    <url>%2F2018%2F01%2F29%2Fblog%2F</url>
+    <content type="text"><![CDATA[学习用 Hexo + Github Pages 搭建个人博客,并通过自己的域名访问博客. 搭建环境安装 Git安装 nvm 和 Node.js安装 Hexo12# -g 全局安装npm install -g hexo-cli 初始化1234# 没有指定文件夹将会在当前文件夹新建所需要的文件hexo init &lt;folder&gt;cd &lt;folder&gt;npm install 常用的命令12345678910111213# layout# - post default# - page# - drafthexo new [layout] &lt;title&gt;# 清除缓存文件和已生成的静态文件hexo clean# 生成静态文件hexo g# 部署网站hexo d# 启动服务器hexo server 个性化设置站点配置文件123456789# _config.yml# 注意冒号后空格title: 网站标题subtitle: 网站副标题description: 网站描述author: 名字language: 语言url: 网址theme: next 主题配置文件下载主题1git clone git@github.com:iissnan/hexo-theme-next.git themes/next 修改配置1234567891011121314151617# ./themes/next/_config.yml# 修改外观scheme: Gemini# 设置菜单menu: home: / || home about: /about/ || user tags: /tags/ || tags categories: /categories/ || th archives: /archives/ || archive# 设置头像# source/images/logo.jpgavatar: /images/logo.jpg# 设置背景动画canvas_nest: true# 设置侧边栏display: always 添加页面123456# 添加标签页面hexo new page tags# 添加分类页面hexo new page categories# 添加关于页面hexo new page about 设置页面类型123456789# source/tags/index.mdtitle: 标签type: "tags"# source/categories/index.mdtitle: 分类type: "categories"# source/about/index.mdtitle: 关于我type: "about" 部署GitGithub创建仓库12345678# 格式必需Repository name: &lt;accountName&gt;.github.io# 描述非必需Description:# 权限必需public# initialize非必需initialize this repository with a README 安装 hexo-deploer-git1npm install hexo-deploer-git --save 配置12345# _config.yml 站点配置文件deploy: type: git repo: &lt;repository url&gt; branch: [branch] 添加 README.md123# ./public/touch README.mdvim README.md 部署命令1hexo g -d 域名域名解析123主机记录: 域名记录类型: CNAME记录值: &lt;accountName&gt;.github.io 域名映射123# ./sourceecho blog.orzcn.cn &gt; CNAMEhexo g -d 写作新建文章1hexo new &lt;title&gt; Front-matter123456# Front-matter 是文件最上方以 --- 分隔的区域,用来指定个别文件的变量title: 标题date: 建立日期updated: 更新日期tags: 标签categories: 分类 摘要12# 上方的文字作为文章的摘要&lt;!-- more --&gt; 扩展添加 Local Search 安装 hexo-generator-searchdb，在站点的根目录下执行以下命令 1npm install hexo-generator-searchdb --save 编辑站点配置文件，新增以下内容到任意位置 12345search: path: search.xml field: post format: html limit: 10000 编辑主题配置文件，启用本地搜索功能 12local_search: enable: true]]></content>
+      <categories>
+        <category>教程</category>
+      </categories>
+      <tags>
+        <tag>Hexo</tag>
+        <tag>Github</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[Hello World]]></title>
+    <url>%2F2018%2F01%2F29%2Fhello-world%2F</url>
+    <content type="text"><![CDATA[Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick StartCreate a new post1$ hexo new "My New Post" More info: Writing Run server1$ hexo server More info: Server Generate static files1$ hexo generate More info: Generating Deploy to remote sites1$ hexo deploy More info: Deployment]]></content>
+  </entry>
+</search>
